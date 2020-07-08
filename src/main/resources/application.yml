@@ -8,3 +8,5 @@ spring:
     password: Dnjscksdn98@
   jpa:
     show-sql: true
+  jackson:
+    property-naming-strategy: SNAKE_CASE
