@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model.network.response;
 
+import com.springboot.admin.domain.enums.ItemStatus;
 import com.springboot.admin.domain.model.network.request.ItemApiRequest;
 import lombok.*;
 
@@ -15,7 +16,7 @@ public class ItemApiResponse {
 
     private Long id;
 
-    private String status;
+    private ItemStatus status;
 
     private String name;
 

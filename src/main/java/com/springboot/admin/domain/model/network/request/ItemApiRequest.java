@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model.network.request;
 
+import com.springboot.admin.domain.enums.ItemStatus;
 import lombok.*;
 
 import java.math.BigDecimal;
@@ -14,7 +15,7 @@ public class ItemApiRequest {
 
     private Long id;
 
-    private String status;
+    private ItemStatus status;
 
     private String name;
 

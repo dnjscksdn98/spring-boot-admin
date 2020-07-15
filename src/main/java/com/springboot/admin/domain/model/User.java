@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model;
 
+import com.springboot.admin.domain.enums.UserStatus;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedBy;
@@ -31,7 +32,8 @@ public class User {
 
     private String password;
 
-    private String status;
+    @Enumerated(value = EnumType.STRING)
+    private UserStatus status;  // REGISTERED / UNREGISTERED
 
     private String email;
 

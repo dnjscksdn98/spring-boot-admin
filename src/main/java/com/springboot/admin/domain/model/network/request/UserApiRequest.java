@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model.network.request;
 
+import com.springboot.admin.domain.enums.UserStatus;
 import lombok.*;
 
 import java.time.LocalDateTime;
@@ -17,7 +18,7 @@ public class UserApiRequest {
     
     private String password;
     
-    private String status;
+    private UserStatus status;
     
     private String email;
     

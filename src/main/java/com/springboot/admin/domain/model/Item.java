@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model;
 
+import com.springboot.admin.domain.enums.ItemStatus;
 import com.springboot.admin.domain.model.network.request.ItemApiRequest;
 import lombok.*;
 import lombok.experimental.Accessors;
@@ -28,7 +29,8 @@ public class Item {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String status;
+    @Enumerated(value = EnumType.STRING)
+    private ItemStatus status;
 
     private String name;
 

@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model.network.response;
 
+import com.springboot.admin.domain.enums.UserStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -19,7 +20,7 @@ public class UserApiResponse {
 
     private String password;
 
-    private String status;
+    private UserStatus status;
 
     private String email;
 

@@ -1,5 +1,6 @@
 package com.springboot.admin.service;
 
+import com.springboot.admin.domain.enums.UserStatus;
 import com.springboot.admin.domain.model.User;
 import com.springboot.admin.domain.model.network.Header;
 import com.springboot.admin.domain.model.network.request.UserApiRequest;
@@ -29,7 +30,7 @@ public class UserApiLogicService implements CrudInterface<UserApiRequest, UserAp
         User user = User.builder()
                 .account(userApiRequest.getAccount())
                 .password(userApiRequest.getPassword())
-                .status("REGISTERED")
+                .status(UserStatus.REGISTERED)
                 .phoneNumber(userApiRequest.getPhoneNumber())
                 .email(userApiRequest.getEmail())
                 .registeredAt(LocalDateTime.now())
