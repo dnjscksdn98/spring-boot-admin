@@ -1,5 +1,6 @@
 package com.springboot.admin.domain.model;
 
+import com.springboot.admin.domain.model.network.request.ItemApiRequest;
 import lombok.*;
 import lombok.experimental.Accessors;
 import org.springframework.data.annotation.CreatedBy;
@@ -60,5 +61,16 @@ public class Item {
 
     @OneToMany(fetch = FetchType.LAZY, mappedBy = "item")
     private List<OrderDetail> orderDetailList;
+
+    public void update(ItemApiRequest request) {
+        this.status = request.getStatus();
+        this.name = request.getName();
+        this.title = request.getTitle();
+        this.content = request.getContent();
+        this.price = request.getPrice();
+        this.brandName = request.getBrandName();
+        this.updatedAt = LocalDateTime.now();
+        this.updatedBy = "ADMIN";
+    }
 
 }
